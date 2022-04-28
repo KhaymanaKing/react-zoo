@@ -1,12 +1,21 @@
 import './App.css';
 import ParadeList from './Parade/ParadeList';
+import OpenSign from './OpenSign/OpenSign';
 
 
 import { useState } from 'react';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(true);
   const [animal, setAnimal] = useState (['giraffe', 'Dinosaur']);
   
+  function handleOpen(){
+    setIsOpen(true);
+  }
+  function handleClose(){
+    setIsOpen(false);
+  }
+
   function handleGiraffe(){
     animal.push('giraffe');
     setAnimal([...animal]);
@@ -33,8 +42,12 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <ParadeList animals ={animal}/> 
       
+      <OpenSign isOpen={isOpen}/>
+      <button onClick={handleOpen}>Open?</button>
+      <button onClick={handleClose}>Close it Down!</button>
+
+      <ParadeList animals ={animal}/>    
       <div className='animal-buttons'>
         <button onClick={handleGiraffe}>Giraffe</button>
         <button onClick={handleDinosaur}>Dinosaur</button>
