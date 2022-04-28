@@ -1,17 +1,18 @@
 import './App.css';
 import ParadeList from './Parade/ParadeList';
 
+
 import { useState } from 'react';
 
 function App() {
-  const [animal, setAnimal] = useState (['giraffe', 'walrus']);
+  const [animal, setAnimal] = useState (['giraffe', 'Dinosaur']);
   
   function handleGiraffe(){
     animal.push('giraffe');
     setAnimal([...animal]);
   }
-  function handleWalrus(){
-    animal.push('walrus');
+  function handleDinosaur(){
+    animal.push('dinosaur');
     setAnimal([...animal]);
   }
   function handleTurtle(){
@@ -20,6 +21,10 @@ function App() {
   }
   function handleSnake(){
     animal.push('snake');
+    setAnimal([...animal]);
+  }
+  function handleDelete(){
+    animal.pop();
     setAnimal([...animal]);
   }
   
@@ -32,9 +37,10 @@ function App() {
       
       <div className='animal-buttons'>
         <button onClick={handleGiraffe}>Giraffe</button>
-        <button onClick={handleWalrus}>Walrus</button>
+        <button onClick={handleDinosaur}>Dinosaur</button>
         <button onClick={handleTurtle}> Turtle</button>
         <button onClick={handleSnake}>Snake</button>
+        <button onClick={handleDelete}>Remove Last?</button>
       </div>
     </div>
   );
