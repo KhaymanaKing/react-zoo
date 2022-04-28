@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import ParadeList from './Parade/ParadeList';
+
+import { useState } from 'react';
 
 function App() {
+  const [animal, setAnimal] = useState (['giraffe', 'walrus']);
+  
+  function handleGiraffe(){
+    animal.push('giraffe');
+    setAnimal([...animal]);
+  }
+  function handleWalrus(){
+    animal.push('walrus');
+    setAnimal([...animal]);
+  }
+  function handleTurtle(){
+    animal.push('turtle');
+    setAnimal([...animal]);
+  }
+  function handleSnake(){
+    animal.push('snake');
+    setAnimal([...animal]);
+  }
+  
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <ParadeList animals ={animal}/> 
+      
+      <div className='animal-buttons'>
+        <button onClick={handleGiraffe}>Giraffe</button>
+        <button onClick={handleWalrus}>Walrus</button>
+        <button onClick={handleTurtle}> Turtle</button>
+        <button onClick={handleSnake}>Snake</button>
+      </div>
     </div>
   );
 }
