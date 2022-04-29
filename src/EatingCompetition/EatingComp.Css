@@ -1,0 +1,17 @@
+div.eat-comp   {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div.competitor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    display: block;
+}
+.emoji {
+    padding: 50px;
+}
