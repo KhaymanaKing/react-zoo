@@ -1,7 +1,7 @@
 import './App.css';
 import ParadeList from './Parade/ParadeList';
 import OpenSign from './OpenSign/OpenSign';
-
+import EatingCompetition from './EatingCompetition/EatingCompetition';
 
 import { useState } from 'react';
 
@@ -41,12 +41,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        Khaymans Zoo!
       </header>
       
       <OpenSign isOpen={isOpen}/>
       <button onClick={handleOpen}>Open?</button>
       <button onClick={handleClose}>Close it Down!</button>
-
+      <EatingCompetition/>
+      <h1> Worlds smallest Emoji Parade</h1>
       <ParadeList animals ={animal}/>    
       <div className='animal-buttons'>
         <button onClick={handleGiraffe}>Giraffe</button>
