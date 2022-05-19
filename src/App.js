@@ -2,6 +2,7 @@ import './App.css';
 import ParadeList from './Parade/ParadeList';
 import OpenSign from './OpenSign/OpenSign';
 import EatingCompetition from './EatingCompetition/EatingCompetition';
+import Button from '@mui/material/Button/Button';
 
 import { useState } from 'react';
 
@@ -45,17 +46,17 @@ function App() {
       </header>
       
       <OpenSign isOpen={isOpen}/>
-      <button value='open' onClick={handleOpen}>Open?</button>
-      <button value='close' onClick={handleClose}>Close it Down!</button>
+      <Button variant='contained'value='open' onClick={handleOpen}>Open?</Button>
+      <Button variant='contained' color='error' value='close' onClick={handleClose}>Close it Down!</Button>
       <EatingCompetition/>
       <h1> Worlds smallest Emoji Parade</h1>
       <ParadeList animals ={animal}/>    
       <div className='animal-buttons'>
-        <button onClick={handleGiraffe}>Giraffe</button>
-        <button onClick={handleDinosaur}>Dinosaur</button>
-        <button onClick={handleTurtle}> Turtle</button>
-        <button onClick={handleSnake}>Snake</button>
-        <button onClick={handleDelete}>Remove Last?</button>
+        <Button variant='contained' color='warning' onClick={handleGiraffe}>Giraffe</Button>
+        <Button variant='contained' color='inherit' onClick={handleDinosaur}>Dinosaur</Button>
+        <Button variant='contained' color='success' onClick={handleTurtle}> Turtle</Button>
+        <Button variant='contained' onClick={handleSnake}>Snake</Button>
+        <Button variant='contained' color='error' onClick={handleDelete}>Remove Last?</Button>
       </div>
     </div>
   );

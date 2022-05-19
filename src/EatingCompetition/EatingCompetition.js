@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Button from '@mui/material/Button/Button';
 
 
 export default function EatingCompetition() {
@@ -19,10 +20,10 @@ export default function EatingCompetition() {
       <div className='competitor'>
         <div className='emoji' style={{ fontSize: `${bearSize}%` } }>🐻</div>        
       </div>
-      <button onClick={() => setBearSize(bearSize + SIZE_MODIFIER)}>The Bear Eats</button>
-      <button onClick={() => setOtterSize(otterSize - SIZE_MODIFIER)}>The Bear steals food</button>
-      <button onClick={() => setOtterSize(otterSize + SIZE_MODIFIER)}>The Otter Eats</button>
-      <button onClick={() => setBearSize(bearSize - SIZE_MODIFIER)}>The Otter steals food</button>
+      <Button variant='contained' color='success' onClick={() => setBearSize(bearSize + SIZE_MODIFIER)}>The Bear Eats</Button>
+      <Button variant='contained' color='success' onClick={() => setOtterSize(otterSize - SIZE_MODIFIER)}>The Bear steals food</Button>
+      <Button variant='contained' color='success' onClick={() => setOtterSize(otterSize + SIZE_MODIFIER)}>The Otter Eats</Button>
+      <Button variant='contained' color='success' onClick={() => setBearSize(bearSize - SIZE_MODIFIER)}>The Otter steals food</Button>
     </div>
   );
 }
