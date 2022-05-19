@@ -11,7 +11,7 @@ export default function EatingCompetition() {
   return (
       
     <div className='eat-comp'>
-      <h1> Worlds Smallest Eating Competion </h1>
+      <h1> Worlds Smallest Eating Competition </h1>
       <div className='competitor'>
         <div className='emoji' style={{ fontSize: `${otterSize}%` } }>
             🦦</div>       
