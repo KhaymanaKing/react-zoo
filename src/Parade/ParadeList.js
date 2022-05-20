@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ParadeAnimal from './ParadeAnimal';
 import './Parade.css';
-import Button from '@mui/material/Button/Button';
+import { Button } from '@mui/material/Button/Button';
 
 export default function Parade() {
   
