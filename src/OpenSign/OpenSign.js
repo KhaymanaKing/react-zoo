@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Open.css';
-import Button from '@mui/material/Button/Button';
+import Button from '@mui/material/Button';
 
 export default function OpenSign() {
   const [isOpen, setIsOpen] = useState(true);
