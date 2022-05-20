@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Button from '@mui/material/Button/Button';
+import Button from '@mui/material/Button';
 
 
 export default function EatingCompetition() {
