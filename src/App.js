@@ -5,10 +5,8 @@ import EatingCompetition from './EatingCompetition/EatingCompetition';
 import Admin from './Admin';
 
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter as Router, 
   Route,
-  Redirect,
   Link,
 } from 'react-router-dom';
 function App() {
